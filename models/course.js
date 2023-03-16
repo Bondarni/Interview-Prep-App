@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
         through: models.Student_Course
       })
       Course.hasOne(models.Grade, {
-        foreignKey: 'courseId',
+        foreignKey: 'gradeId',
         as: 'course_grade'
       })
     }

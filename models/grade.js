@@ -12,20 +12,13 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Grade.belongsToMany(models.Course, {
-        foreignKey: 'courseId'
+        foreignKey: 'gradeId'
       })
     }
   }
   Grade.init({
     score: DataTypes.INTEGER,
     letter: DataTypes.STRING,
-    courseId: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "courses",
-        key: "id"
-      },
-     }
   }, {
     sequelize,
     modelName: 'Grade',
