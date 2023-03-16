@@ -25,6 +25,6 @@ export default {
 <style>
 .student-card {
   border: solid #21212138 1rem;
-  margin: 5em
+  margin: 5em;
 }
 </style>
