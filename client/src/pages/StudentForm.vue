@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import Client from '@/services/api'
 export default {
   name: 'StudentForm',
   components: {
@@ -27,9 +27,9 @@ export default {
     handleEmailChange(e){
       this.email = e.target.value
     },
-    async addStudent(){
-      const response = await axios.post(``)
-      console.log(response)
+    async addStudent(e){
+      e.preventDefault()
+      await Client.post(`http://localhost:3001/api/students/newstudent`, {name:this.name, email:this.email} )
       this.$router.push(`/students`)
     }
   }
