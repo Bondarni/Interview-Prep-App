@@ -4,7 +4,7 @@
       <NavBar />
     </header>
     <main>
-      <router-view header="Of Course!"></router-view>
+      <router-view></router-view>
     </main>
   </div>
 </template>

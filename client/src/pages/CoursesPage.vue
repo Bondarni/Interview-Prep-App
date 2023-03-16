@@ -12,8 +12,12 @@ import CourseCard from '@/components/CourseCard.vue';
     components: {
       CourseCard
     },
-    data: () => ({}),
-    mounted() {},
+    data: () => ({
+      courses: []
+    }),
+    mounted() {
+      // this.getCourses()
+    },
     methods: {
       async getCourses() {
         const res = await axios.get('')

@@ -12,12 +12,17 @@ import StudentCard from '@/components/StudentCard.vue';
     components: {
       StudentCard,
     },
-    data: () => ({}),
-    mounted() {},
+    data: () => ({
+      students: []
+    }),
+    mounted() {
+      this.getStudents()
+    },
     methods: {
       async getStudents() {
-        const res = await axios.get('')
+        const res = await axios.get('http://localhost:3001/api/students/all')
         this.students = res.data
+        console.log(res)
       },
     }
   }
