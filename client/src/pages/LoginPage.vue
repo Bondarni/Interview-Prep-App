@@ -1,15 +1,14 @@
 <template>
   <div class="logincontainer">
     <form v-if="user" class="loginform" @submit="loginUser">
-      <input v-model="login.username" placeholder="User Name">
+      <input v-model="login.email" placeholder="User Email">
       <input v-model="login.password" placeholder="Password">
-      <button :disabled="!login.username || !login.password">Log In</button>
+      <button :disabled="!login.email || !login.password">Log In</button>
       <p @click="toggleUser()">New to the site?  Click here to sign up!</p>
     </form>
-    <form v-else class="registerform" @submit="registerUser">
-      <input v-model="register.name" placeholder="First and Last Name">
-      <input v-model="register.email" placeholder="Your Email Address">
+    <form v-else class="registerform" @submit="handleSubmit">
       <input v-model="register.username" placeholder="New User Name">
+      <input v-model="register.email" placeholder="Your Email Address">
       <input v-model="register.password" placeholder="New Password">
       <button :disabled="!register.username || !register.password">Create Account</button>
       <p @click="toggleUser()">Already have an account?  Click here to log in!</p>
@@ -18,7 +17,8 @@
 </template>
 
 <script>
-import axios from 'axios'
+import { RegisterUser } from '@/services/Auth'
+import { SignInUser } from '../services/Auth'
 
   export default{
     name: 'LoginPage',
@@ -26,7 +26,7 @@ import axios from 'axios'
     data: () => ({
       user: true,
       login: {
-        username: '',
+        email: '',
         password: ''
       },
       register: {
@@ -44,11 +44,21 @@ import axios from 'axios'
           return this.user = true
         }
       },
-      loginUser() {
+      async loginUser(e) {
+        e.preventDefault()
+        await SignInUser ({
+          email: this.login.email,
+          password: this.login.password
+        })
         this.$router.push('/welcome')
       },
-      async registerUser() {
-        await axios.post('')
+      async handleSubmit(e) {
+        e.preventDefault()
+        await RegisterUser ({
+          username: this.register.username, 
+          email: this.register.email,
+          password: this.register.password
+        })
         this.user = true
       }
     }
