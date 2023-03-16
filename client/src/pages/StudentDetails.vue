@@ -3,6 +3,7 @@
       <h1>{{ studentDetails.name }}</h1>
       <h3>Overall GPA</h3>
       <h4>List of Courses with associated letter grade</h4>
+      <button @click="goHome">Back</button>
     </div>
 </template>
 
@@ -25,7 +26,7 @@ import axios from 'axios'
         this.studentDetails = response.data
       },
       goHome(){
-        this.$router.push(`/`)
+        this.$router.push(`/welcome`)
     }
   }
 }
