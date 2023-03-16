@@ -11,6 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Grade.belongsToMany(models.Course, {
+        foreignKey: 'courseId'
+      })
     }
   }
   Grade.init({
@@ -22,7 +25,6 @@ module.exports = (sequelize, DataTypes) => {
         model: "courses",
         key: "id"
       },
-      onDelete: "CASCADE"
      }
   }, {
     sequelize,

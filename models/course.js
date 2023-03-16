@@ -12,7 +12,13 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Course.belongsToMany(models.Student, {
-        foreignKey: ''
+        foreignKey: 'courseId',
+        as: 'courses',
+        through: models.Student_Course
+      })
+      Course.hasOne(models.Grade, {
+        foreignKey: 'courseId',
+        as: 'course_grade'
       })
     }
   }
