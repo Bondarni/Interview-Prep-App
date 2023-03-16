@@ -8,8 +8,8 @@ Router.get('/:id', controller.GetStudentByPk)
 
 Router.post(
   '/newstudent',
-  // middleware.stripToken,
-  // middleware.verifyToken,
+  middleware.stripToken,
+  middleware.verifyToken,
   controller.CreateStudent
 )
 
