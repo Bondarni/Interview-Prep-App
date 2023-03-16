@@ -1,5 +1,4 @@
 const { User } = require("../models")
-const stringify = require("../utils")
 const middleware = require('../middleware')
 
 const findUserByPk = async (req, res) => {
