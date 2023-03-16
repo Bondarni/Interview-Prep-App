@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 
   export default {
     name: 'WelcomePage',
@@ -24,14 +23,6 @@ import axios from 'axios';
       // this.getCourses()
     },
     methods: {
-      async getStudents() {
-        const res = await axios.get('')
-        this.students = res.data
-      },
-      async getCourses() {
-        const res = await axios.get('')
-        this.courses = res.data
-      }
     }
   }
 </script>
