@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="student-card">
     <h2>{{ student.name }}</h2>
-    <h5>email</h5>
-    <h5>id</h5>
+    <h5>{{ student.email }}</h5>
+    <h5>Student ID: {{ student.id }}</h5>
     <h5>courses</h5>
   </div>
 </template>
@@ -10,7 +10,7 @@
 <script>
 export default {
   name: 'StudentCard',
-  props: ['students'],
+  props: ['student'],
   components: {
 
   },
@@ -22,4 +22,9 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.student-card {
+  border: solid #21212138 1rem;
+  margin: 5em
+}
+</style>
