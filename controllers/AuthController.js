@@ -13,9 +13,9 @@ const findUserByPk = async (req, res) => {
 
 const register = async (req, res) => {
     try {
-        const { email, password, name } = req.body
+        const { email, password, username } = req.body
         let passwordDigest = await middleware.hashPassword(password)
-        const user = await User.create({ email, passwordDigest, name, rating: null })
+        const user = await User.create({ email, passwordDigest, username })
         res.send(user)
     } catch (error) {
         throw error
