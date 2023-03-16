@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'StudentForm',
   components: {
@@ -29,7 +30,7 @@ export default {
     async addStudent(){
       const response = await axios.post(``)
       console.log(response)
-      this.$router.push(`/`)
+      this.$router.push(`/students`)
     }
   }
 }
