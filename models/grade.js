@@ -16,10 +16,18 @@ module.exports = (sequelize, DataTypes) => {
   Grade.init({
     score: DataTypes.INTEGER,
     letter: DataTypes.STRING,
-    courseId: DataTypes.INTEGER
+    courseId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "courses",
+        key: "id"
+      },
+      onDelete: "CASCADE"
+     }
   }, {
     sequelize,
     modelName: 'Grade',
+    tableName: 'grades'
   });
   return Grade;
 };
