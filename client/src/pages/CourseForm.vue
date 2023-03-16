@@ -29,7 +29,7 @@ export default {
     async addCourse(){
       const response = await axios.post(``)
       console.log(response)
-      this.$router.push(`/`)
+      this.$router.push(`/courses`)
 
     }
   }
