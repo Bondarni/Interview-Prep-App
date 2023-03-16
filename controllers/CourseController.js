@@ -9,6 +9,15 @@ const GetAllCourses = async (req, res) => {
   }
 }
 
+const GetCourseByPk = async (req, res) => {
+  try {
+    const course = await Course.findByPk(req.params.id, {})
+    res.send(course)
+  } catch (error) {
+    throw error
+  }
+}
+
 const CreateCourse = async (req, res) => {
   try {
     const course = await Course.create({ ...req.body })
@@ -32,6 +41,7 @@ const DeleteCourse = async (req, res) => {
 
 module.exports = {
   GetAllCourses,
+  GetCourseByPk,
   CreateCourse,
   DeleteCourse
 }

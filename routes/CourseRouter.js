@@ -4,6 +4,8 @@ const middleware = require('../middleware')
 
 Router.get('/all', controller.GetAllCourses)
 
+Router.get('/:id', controller.GetCourseByPk)
+
 Router.post(
   '/newcourse',
   middleware.stripToken,
