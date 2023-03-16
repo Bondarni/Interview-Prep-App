@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
   export default{
     name: 'LoginPage',
     components: {},
@@ -28,9 +30,8 @@
         password: ''
       },
       register: {
-        name: '',
-        email: '',
         username: '',
+        email: '',
         password: ''
       }
     }),
@@ -46,7 +47,8 @@
       loginUser() {
         this.$router.push('/welcome')
       },
-      registerUser() {
+      async registerUser() {
+        await axios.post('')
         this.user = true
       }
     }

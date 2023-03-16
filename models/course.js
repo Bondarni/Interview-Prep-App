@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         as: 'courses',
         through: models.Student_Course
       })
-      Course.hasOne(models.Grade, {
+      Course.belongsTo(models.Grade, {
         foreignKey: 'gradeId',
         as: 'course_grade'
       })
