@@ -6,7 +6,7 @@
 
 ####
 
-[Lucid](https://lucid.app/lucidchart/03f949a4-fea3-4325-aff8-07ca7bad5aea/edit?existing=1&token=1f34232aaedf6d23ebbc525d4735555cdb8d18cdef34a49475303cc3fcf2aed4-eml%3Dmjdurando82%2540yahoo.com%26ts%3D1676997422%26uid%3D179953251&docId=03f949a4-fea3-4325-aff8-07ca7bad5aea&shared=true&invitationId=inv_073ca0de-42cb-43f1-b765-131c171bd166&page=0_0#) | [Trello](https://trello.com/b/2TOlmBWK/interview-prep-app)
+[ERD](https://lucid.app/lucidchart/03f949a4-fea3-4325-aff8-07ca7bad5aea/edit?existing=1&token=1f34232aaedf6d23ebbc525d4735555cdb8d18cdef34a49475303cc3fcf2aed4-eml%3Dmjdurando82%2540yahoo.com%26ts%3D1676997422%26uid%3D179953251&docId=03f949a4-fea3-4325-aff8-07ca7bad5aea&shared=true&invitationId=inv_073ca0de-42cb-43f1-b765-131c171bd166&page=0_0#) | [Component Hierarchy Diagram](https://lucid.app/lucidchart/f017dda5-4573-439c-874b-c19e98dbe663/edit?beaconFlowId=EADA140BDE5A87A4&invitationId=inv_9261def7-d735-4d5e-b6c6-deb361d43fca&page=0_0#) | [Trello](https://trello.com/b/2TOlmBWK/interview-prep-app)
 
 ---
 
