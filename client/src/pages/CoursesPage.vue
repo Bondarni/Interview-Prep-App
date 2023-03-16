@@ -13,10 +13,10 @@ import CourseCard from '@/components/CourseCard.vue';
       CourseCard
     },
     data: () => ({
-      courses: [],
+      courses: []
     }),
     mounted() {
-      this.getCourses()
+      // this.getCourses()
     },
     methods: {
       async getCourses() {

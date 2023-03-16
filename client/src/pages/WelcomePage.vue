@@ -18,8 +18,7 @@
       students: [],
       courses: []
     }),
-    mounted() {
-    },
+    mounted() {},
     methods: {
     }
   }
