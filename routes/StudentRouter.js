@@ -12,5 +12,10 @@ Router.post(
   middleware.verifyToken,
   controller.CreateStudent
 )
-
+Router.delete(
+  '/delete/:student_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controller.DeleteStudent
+)
 module.exports = Router

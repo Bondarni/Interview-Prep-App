@@ -25,9 +25,22 @@ const CreateStudent = async (req, res) => {
     throw error
   }
 }
+const DeleteStudent = async (req, res) => {
+  try {
+    await Student.destroy({ where: { id: req.params.student_id } })
+    res.send({
+      message: `Deleted Student with an id of ${req.params.student_id}`,
+      payload: req.params.student_id,
+      status: 'Ok'
+    })
+  } catch (error) {
+    throw error
+  }
+}
 
 module.exports = {
   GetAllStudents,
   GetStudentByPk,
-  CreateStudent
+  CreateStudent,
+  DeleteStudent
 }

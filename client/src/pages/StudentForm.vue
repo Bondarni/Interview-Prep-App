@@ -28,7 +28,7 @@ export default {
       this.email = e.target.value
     },
     async addStudent(){
-      await Client.post(`http://localhost:3001/api/students/newstudent`)
+      await Client.post(`http://localhost:3001/api/students/newstudent`, this.form)
       this.$router.push(`/students`)
     }
   }
