@@ -21,6 +21,7 @@ import StudentCard from '@/components/StudentCard.vue';
     methods: {
       async getStudents() {
         const res = await axios.get('http://localhost:3001/api/students/all')
+        res.data = res.data.sort((a,b) => a.name - b.name)
         this.students = res.data
         console.log(res)
       },

@@ -21,6 +21,7 @@ import CourseCard from '@/components/CourseCard.vue';
     methods: {
       async getCourses() {
         const res = await axios.get('')
+        res.data = res.data.sort((a,b) => a.name - b.name)
         this.courses = res.data
       }
     }
