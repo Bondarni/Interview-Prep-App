@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import StudentCard from '@/components/StudentCard.vue';
   export default{
     name: 'StudentsPage',
@@ -13,7 +14,12 @@ import StudentCard from '@/components/StudentCard.vue';
     },
     data: () => ({}),
     mounted() {},
-    methods: {}
+    methods: {
+      async getStudents() {
+        const res = await axios.get('')
+        this.students = res.data
+      },
+    }
   }
 </script>
 
