@@ -33,7 +33,7 @@ import { SignInUser } from '../services/Auth'
         username: '',
         email: '',
         password: ''
-      }
+      },
     }),
     mounted() {},
     methods: {
