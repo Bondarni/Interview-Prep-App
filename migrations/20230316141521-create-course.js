@@ -12,21 +12,12 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      studentId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: "users",
-          key: "id"
-        },
-        onDelete: "CASCADE"
-      },
       gradeId: {
         type: Sequelize.INTEGER,
         references: {
           model: "grades",
           key: "id"
         },
-        onDelete: "CASCADE"
       },
       createdAt: {
         allowNull: false,
