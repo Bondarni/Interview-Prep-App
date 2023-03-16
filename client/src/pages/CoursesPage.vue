@@ -12,11 +12,16 @@ import CourseCard from '@/components/CourseCard.vue';
     components: {
       CourseCard
     },
-    data: () => ({}),
-    mounted() {},
+    data: () => ({
+      courses: [],
+    }),
+    mounted() {
+      this.getCourses()
+    },
     methods: {
       async getCourses() {
         const res = await axios.get('')
+        res.data = res.data.sort((a,b) => a.name - b.name)
         this.courses = res.data
       }
     }

@@ -19,8 +19,6 @@
       courses: []
     }),
     mounted() {
-      // this.getStudents()
-      // this.getCourses()
     },
     methods: {
     }
