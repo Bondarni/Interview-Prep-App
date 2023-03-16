@@ -1,13 +1,14 @@
 <template>
-  <h2>Name</h2>
-  <h5>email</h5>
-  <h5>id</h5>
-  <h5>courses</h5>
+  <div>
+    <form>
+      <input>
+    </form>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'StudentCard',
+  name: 'StudentForm',
   components: {
 
   },
