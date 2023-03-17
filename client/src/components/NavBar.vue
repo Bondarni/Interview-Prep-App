@@ -9,7 +9,10 @@
 
 <script>
   export default {
-    name: 'NavBar'
+    name: 'NavBar',
+    data: () => ({
+      showNav: false
+    })
   }
 </script>
 
