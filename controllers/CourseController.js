@@ -1,4 +1,4 @@
-const { Course, Student } = require('../models')
+const { Course, Student, Student_Course } = require('../models')
 
 const GetAllCourses = async (req, res) => {
   try {
@@ -55,10 +55,30 @@ const GetAllCoursesByStudentId = async (req, res) => {
   }
 }
 
+const CreateStudentCourse = async (req,res) => {
+  try {
+    const { name, grade } = req.body
+    const course = await Course.findOne(
+      {where : {name: name}}
+      )
+    const newCourse = {
+      studentId: parseInt(req.params.student_id),
+      courseId: course.id,
+      grade: grade
+    }
+    console.log(newCourse)
+    const studentCourse = await Student_Course.create(newCourse)
+    res.send(studentCourse)
+  } catch(error) {
+    throw error
+  }
+}
+
 module.exports = {
   GetAllCourses,
   GetCourseByPk,
   CreateCourse,
   DeleteCourse,
-  GetAllCoursesByStudentId
+  GetAllCoursesByStudentId,
+  CreateStudentCourse
 }
