@@ -45,8 +45,8 @@ const GetAllCoursesByStudentId = async (req, res) => {
     const student = await Student.findByPk(id, {
       include: [{
         model: Course,
-        as: 'course_list'
-        // through: { attributes: ['grade'] }
+        as: 'course_list',
+        through: { attributes: ['grade'] }
       }]
     });
     res.send(student);
