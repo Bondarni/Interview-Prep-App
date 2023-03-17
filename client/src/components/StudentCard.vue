@@ -8,7 +8,9 @@
 </template>
 
 <script>
+import Client from '../services/api'
 export default {
+  
   name: 'StudentCard',
   props: ['student'],
   components: {
@@ -22,8 +24,7 @@ export default {
   },
   methods: {
     async getCourses() {
-        const res = await Client.get(`/courses/student/${student.id}`)
-        res.data = res.data.sort((a,b) => a.name - b.name)
+        const res = await Client.get(`/courses/student/${this.student.id}`)
         console.log(res.data)
       }
   }
