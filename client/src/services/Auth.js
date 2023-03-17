@@ -1,5 +1,4 @@
 import Client from './api'
-
 export const SignInUser = async (data) => {
   try {
     const res = await Client.post('/auth/login', data)
