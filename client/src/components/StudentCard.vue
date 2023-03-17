@@ -15,10 +15,18 @@ export default {
 
   },
   data: () => ({
-
+    courses: []
   }),
-  mounted(){},
-  methods: {}
+  mounted(){
+    this.getCourses()
+  },
+  methods: {
+    async getCourses() {
+        const res = await Client.get(`/courses/student/${student.id}`)
+        res.data = res.data.sort((a,b) => a.name - b.name)
+        console.log(res.data)
+      }
+  }
 }
 </script>
 

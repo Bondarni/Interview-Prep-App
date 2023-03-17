@@ -13,6 +13,8 @@
       <button :disabled="!register.username || !register.password">Create Account</button>
       <p @click="toggleUser()">Already have an account?  Click here to log in!</p>
     </form>
+    <p>email: admin</p>
+    <p>password: admin</p>
   </div>
 </template>
 
@@ -33,7 +35,7 @@ import { SignInUser } from '../services/Auth'
         username: '',
         email: '',
         password: ''
-      }
+      },
     }),
     mounted() {
       localStorage.clear()

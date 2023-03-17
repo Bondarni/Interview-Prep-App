@@ -1,13 +1,14 @@
 <template>
-  <div class="coursecard">
-    <h2>Course Name</h2>
-    <h5>Grade</h5>
+  <div class="course-card">
+    <h2>{{ course.name }}</h2>
+    <h5>{{ course.grade }}</h5>
   </div>
 </template>
 
 <script>
 export default {
   name: 'CourseCard',
+  props: ['course'],
   components: {
 
   },
