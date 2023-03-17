@@ -5,28 +5,30 @@
 </template>
 
 <script>
-import axios from 'axios'
+
 import StudentCard from '@/components/StudentCard.vue';
+import Client from '../services/api'
   export default{
     name: 'StudentsPage',
     components: {
       StudentCard,
     },
     data: () => ({
-      students: []
+      students: [],
+
     }),
     mounted() {
       this.getStudents()
     },
     methods: {
       async getStudents() {
-        const res = await axios.get('http://localhost:3001/api/students/all')
+        const res = await Client.get('/students/all')
         res.data = res.data.sort((a,b) => a.name - b.name)
         this.students = res.data
       },
       selectStudent(studentId){
         this.$router.push(`/students/${studentId}`)
-
+        
       }
     }
   }
