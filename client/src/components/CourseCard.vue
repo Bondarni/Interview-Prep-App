@@ -1,7 +1,6 @@
 <template>
   <div class="course-card">
     <h2>{{ course.name }}</h2>
-    <h5>{{ course.grade }}</h5>
   </div>
 </template>
 
