@@ -35,7 +35,9 @@ import { SignInUser } from '../services/Auth'
         password: ''
       }
     }),
-    mounted() {},
+    mounted() {
+      localStorage.clear()
+    },
     methods: {
       toggleUser() {
         if (this.user === true) {
