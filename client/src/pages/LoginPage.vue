@@ -38,6 +38,7 @@ import { SignInUser } from '../services/Auth'
       },
     }),
     mounted() {
+      localStorage.clear()
     },
     methods: {
       toggleUser() {

@@ -3,7 +3,7 @@
     <h2>{{ course.name }}</h2>
     <h5>{{ course.grade }}</h5>
   </div>
-  </template>
+</template>
 
 <script>
 export default {
@@ -20,4 +20,9 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+  .coursecard {
+  border: solid #21212138 1rem;
+  margin: 5em;
+  }
+</style>
