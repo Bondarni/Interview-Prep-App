@@ -27,8 +27,12 @@ module.exports = (sequelize, DataTypes) => {
         model: "courses",
         key: "id"
       }
-    }
-  }, {
+    }, grade: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    },
+  {
     sequelize,
     modelName: 'Student_Course',
     tableName: 'student_courses'
