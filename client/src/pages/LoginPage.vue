@@ -33,9 +33,10 @@ import { SignInUser } from '../services/Auth'
         username: '',
         email: '',
         password: ''
-      }
+      },
     }),
-    mounted() {},
+    mounted() {
+    },
     methods: {
       toggleUser() {
         if (this.user === true) {

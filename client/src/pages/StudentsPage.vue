@@ -1,6 +1,6 @@
 <template>
     <div v-for="student in students" :key="student.id">
-      <StudentCard :student="student"/>
+      <StudentCard @click=selectStudent(student.id) :student="student"/>
     </div>
 </template>
 
@@ -24,6 +24,10 @@ import StudentCard from '@/components/StudentCard.vue';
         res.data = res.data.sort((a,b) => a.name - b.name)
         this.students = res.data
       },
+      selectStudent(studentId){
+        this.$router.push(`/students/${studentId}`)
+
+      }
     }
   }
 </script>

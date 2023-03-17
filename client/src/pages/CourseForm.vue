@@ -16,7 +16,8 @@ export default {
 
   },
   data: () => ({
-    name: ''
+    name: '',
+    grade: ''
   }),
   mounted(){},
   methods: {
@@ -24,11 +25,11 @@ export default {
       this.name = e.target.value
     },
     handleGradeChange(e){
-      this.name = e.target.value
+      this.grade = e.target.value
     },
-    async addCourse(){
-      const response = await axios.post(``)
-      console.log(response)
+    async addCourse(e){
+      e.preventDefault()
+      await axios.post(`http://localhost:3001/api/courses/newcourse`, {name:this.name, grade:this.grade})
       this.$router.push(`/courses`)
 
     }
