@@ -5,8 +5,6 @@
 </template>
 
 <script>
-import Client from '../services/api'
-
 export default {
   
   name: 'CourseCard',
@@ -17,14 +15,8 @@ export default {
   data: () => ({
     students: []
   }),
-  mounted(){
-    this.getStudents()
-  },
+  mounted(){},
   methods: {
-    async getStudents() {
-        const res = await Client.get(`/students/course/${this.course.id}`)
-        console.log(res.data)
-    }
   }
 }
 </script>
