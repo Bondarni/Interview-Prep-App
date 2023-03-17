@@ -2,7 +2,7 @@
     <div>
       <h1>{{ studentDetails.name }}</h1>
       <h3>Overall GPA</h3>
-      <h4>List of Courses with associated letter grade</h4>
+      <h4>List of Courses with associated grade</h4>
       <button @click="goHome">Back</button>
     </div>
 </template>
