@@ -66,7 +66,6 @@ const CreateStudentCourse = async (req,res) => {
       courseId: course.id,
       grade: grade
     }
-    console.log(newCourse)
     const studentCourse = await Student_Course.create(newCourse)
     res.send(studentCourse)
   } catch(error) {
