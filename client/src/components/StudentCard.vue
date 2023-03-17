@@ -2,6 +2,7 @@
   <div v-if="courses" class="student-card">
     <h2>{{ student.name }}</h2>
     <h5>{{ student.email }}</h5>
+    <h5 v-if="courses">Overall GPA: {{ getOverallGpa() }}</h5>
     <h5>Student ID: {{ student.id }}</h5>
     <h5>Courses:</h5>
     <div v-for="course in courses" :key="course.id">
@@ -17,8 +18,9 @@
 
 <script>
 import Client from '../services/api'
+
 export default {
-  
+
   name: 'StudentCard',
   props: ['student'],
   components: {
@@ -27,14 +29,22 @@ export default {
   data: () => ({
     courses: []
   }),
-  mounted(){
+  mounted() {
     this.getCourses()
   },
   methods: {
     async getCourses() {
-        const res = await Client.get(`/courses/student/${this.student.id}`)
-        this.courses = (res.data.course_list)
+      const res = await Client.get(`/courses/student/${this.student.id}`)
+      this.courses = (res.data.course_list)
+    },
+    getOverallGpa() {
+      let overall = 0
+      for (let i = 0; i < this.courses?.length; i++) {
+        overall += this.courses[i]?.Student_Course.grade
       }
+      const solution = ((overall)/this.courses?.length)
+      return solution
+    }
   }
 }
 </script>
