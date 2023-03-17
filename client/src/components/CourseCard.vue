@@ -6,17 +6,27 @@
 </template>
 
 <script>
+import Client from '../services/api'
+
 export default {
+  
   name: 'CourseCard',
   props: ['course'],
   components: {
 
   },
   data: () => ({
-
+    students: []
   }),
-  mounted(){},
-  methods: {}
+  mounted(){
+    this.getStudents()
+  },
+  methods: {
+    async getStudents() {
+        const res = await Client.get(`/students/course/${this.course.id}`)
+        console.log(res.data)
+    }
+  }
 }
 </script>
 

@@ -6,6 +6,8 @@ Router.get('/all', controller.GetAllStudents)
 
 Router.get('/:id', controller.GetStudentByPk)
 
+Router.get('/course/:course_id', controller.GetAllStudentsByCourseId)
+
 Router.post(
   '/newstudent',
   middleware.stripToken,
