@@ -35,4 +35,15 @@ import Client from '../services/api'
 </script>
 
 <style>
+button {
+  background-color: #555555;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 6px;
+  margin: 10px
+}
+input {
+  margin: 5px
+}
 </style>
