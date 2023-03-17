@@ -2,14 +2,14 @@
   <div class="logincontainer">
     <form v-if="user" class="loginform" @submit="loginUser">
       <input v-model="login.email" placeholder="User Email">
-      <input v-model="login.password" placeholder="Password">
+      <input v-model="login.password" type="password" placeholder="Password">
       <button :disabled="!login.email || !login.password">Log In</button>
       <p @click="toggleUser()">New to the site?  Click here to sign up!</p>
     </form>
     <form v-else class="registerform" @submit="handleSubmit">
       <input v-model="register.username" placeholder="New User Name">
       <input v-model="register.email" placeholder="Your Email Address">
-      <input v-model="register.password" placeholder="New Password">
+      <input v-model="register.password" type="password" placeholder="New Password">
       <button :disabled="!register.username || !register.password">Create Account</button>
       <p @click="toggleUser()">Already have an account?  Click here to log in!</p>
     </form>
