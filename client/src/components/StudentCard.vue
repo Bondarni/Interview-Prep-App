@@ -3,6 +3,7 @@
     <div v-if="courses" class="student-card">
       <h2>{{ student.name }}</h2>
       <h5>{{ student.email }}</h5>
+      <h5>GPA: {{  getOverallGpa() }}</h5>
       <h5>Student ID: {{ student.id }}</h5>
       <h5>Courses:</h5>
       <div v-for="course in courses" :key="course.id">
