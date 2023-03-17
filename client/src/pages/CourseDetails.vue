@@ -1,5 +1,8 @@
 <template>
-  <div> {{courseDetails.name }}</div>
+  <div>
+    <h1>{{ courseDetails.name }}</h1>
+    <p>Students in Course with Grade</p>
+  </div>
   <button @click="goHome">Back</button>
 </template>
 
