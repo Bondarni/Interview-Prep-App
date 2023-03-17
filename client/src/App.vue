@@ -45,5 +45,10 @@ header {
 
 header nav a {
   margin: 0 1em;
+  text-decoration: none;
+  color: #2c3e50;
+}
+header nav a:hover {
+  color: white;
 }
 </style>

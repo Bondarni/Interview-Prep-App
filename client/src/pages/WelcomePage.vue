@@ -1,7 +1,7 @@
 <template>
     <div class="welcomesection">
       <h1>Welcome, User!</h1>
-      <h3>Choose an option below;</h3>
+      <h3>Choose an option below:</h3>
       <div class="chooselist">
         <div @click="this.$router.push('/students')">Students List</div>
         <div @click="this.$router.push('/courses')">Courses List</div>
@@ -27,5 +27,15 @@
 </script>
 
 <style>
-
+.welcomesection div {
+  display: flex;
+  justify-content: space-evenly;
+}
+.chooselist div {
+margin-top: 5vh;
+font-size: larger;
+}
+.chooselist div:hover {
+color: white;
+}
 </style>
