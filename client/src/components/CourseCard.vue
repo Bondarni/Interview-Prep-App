@@ -1,6 +1,6 @@
 <template>
   <div class="course-card">
-    <h2>{{ course.name }}</h2>
+    <h2 class="course-card-name">{{ course.name }}</h2>
   </div>
 </template>
 
@@ -22,8 +22,11 @@ export default {
 </script>
 
 <style>
-  .coursecard {
+  .course-card {
   border: solid #21212138 1rem;
   margin: 5em;
+  }
+  .course-card:hover {
+    transform: scaleY(1.1);
   }
 </style>
